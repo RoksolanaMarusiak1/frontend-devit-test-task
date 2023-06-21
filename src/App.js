@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import axios from "axios";
+import { API_URL } from "./http";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const navigate = useNavigate();
+  useEffect(() => {
+    async function checkAuth() {
+      if (localStorage.getItem("token")) {
+        try {
+          const response = await axios.get(`${API_URL}/users/refresh`, {
+            withCredentials: true,
+          });
+          localStorage.setItem("token", response.data.accessToken);
+          navigate("/posts");
+        } catch (error) {
+          navigate("/login");
+          console.log(error?.response?.data?.message);
+        }
+      }
+    }
+    checkAuth();
+  }, []);
+
+  return <div></div>;
 }
 
 export default App;

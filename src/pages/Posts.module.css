@@ -1,0 +1,63 @@
+.postsContainer {
+  min-height: 100vh;
+  background-color: #ccffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  gap: 30px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.paginationButton {
+  border: none;
+  background-color: transparent;
+}
+
+button:disabled .paginationIcon {
+  color: #00ccff;
+}
+
+.paginationIcon {
+  width: 30px;
+  height: 30px;
+  color: #3366ff;
+}
+
+.createPostButton {
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: #3366ff;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter select,
+.filter input {
+  width: 100px;
+  height: 30px;
+}

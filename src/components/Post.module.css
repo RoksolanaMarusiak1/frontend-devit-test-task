@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.postContainer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0px 20px 50px #d9dbdf;
+  max-width: 700px;
+}
+
+.postContainer img {
+  border-radius: 4px;
+}
+
+.postBody {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 50px 0 50px;
+  flex-direction: column;
+}
+
+.postBody h2 {
+  margin: 0;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+.categoryItem {
+  border: 1px solid #6a6a6a;
+  padding: 8px;
+  border-radius: 3px;
+  color: #6a6a6a;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.categoryItem:hover {
+  border: 1px solid #99ccff;
+  color: #99ccff;
+}
+
+.postData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.profile,
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileIcon,
+.timeIcon {
+  width: 25px;
+  height: 25px;
+  color: #6a6a6a;
+}
+
+.readMoreButton {
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: #3366ff;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.edit,
+.delete {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 20px 50px #d9dbdf;
+}
+
+.editIcon,
+.deleteIcon {
+  width: 40px;
+  height: 40px;
+}

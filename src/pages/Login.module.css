@@ -1,0 +1,59 @@
+.loginContainer {
+  min-height: 100vh;
+  background-color: #ccffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0px 20px 50px #d9dbdf;
+  min-width: 400px;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm input {
+  width: 250px;
+  height: 40px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.loginButton {
+  height: 50px;
+  width: 130px;
+  border: none;
+  background-color: #3366ff;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.successMessage {
+  color: green;
+}
